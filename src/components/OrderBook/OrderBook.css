@@ -1,0 +1,17 @@
+.order-book {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: #1b262d;
+}
+
+.order-book > table {
+  padding: 15px;
+  color: white;
+}
+
+.vertical-divider {
+  width: 1px;
+  height: auto;
+  background-color: white;
+}
