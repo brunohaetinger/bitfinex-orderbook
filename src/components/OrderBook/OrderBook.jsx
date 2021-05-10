@@ -29,9 +29,9 @@ function OrderBook({orderBook}) {
         <table>
           <tbody>
             <tr>
-              <thead>Count</thead>
-              <thead>Amount</thead>
-              <thead>Price</thead>
+                <th>Count</th>
+                <th>Amount</th>
+                <th>Price</th>
             </tr >
             { orderBook.bids && orderBook.bids.map(row => <OrderBookBidRow {...row} />)}
           </tbody>
@@ -42,11 +42,11 @@ function OrderBook({orderBook}) {
         <table>
           <tbody>
             <tr>
-              <thead>Price</thead>
-              <thead>Amount</thead>
-              <thead>Count</thead>
+                <th>Price</th>
+                <th>Amount</th>
+                <th>Count</th>
             </tr >
-            { orderBook.bids && orderBook.bids.map(row => <OrderBookAskRow {...row} />)}
+            { orderBook.asks && orderBook.asks.map(row => <OrderBookAskRow {...row} />)}
           </tbody>
         </table>
       }
