@@ -1,6 +1,7 @@
 .order-book {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   text-align: center;
   background-color: #1b262d;
 }

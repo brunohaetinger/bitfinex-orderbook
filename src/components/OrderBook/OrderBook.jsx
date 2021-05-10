@@ -23,8 +23,10 @@ const OrderBookAskRow = memo(({price, count, amount}) => {
 })
 
 function OrderBook({orderBook}) {
-  console.log(orderBook);
-  return <div className="order-book">
+  const loading = <h1>...Loading Order Book</h1>
+
+  return !orderBook.bids.length || !orderBook.asks.length ? loading : 
+    <div className="order-book">
      {
         <table>
           <tbody>
@@ -37,7 +39,7 @@ function OrderBook({orderBook}) {
           </tbody>
         </table>
       }
-      <div class="vertical-divider"></div>
+      <div className="vertical-divider"></div>
       {
         <table>
           <tbody>
@@ -50,7 +52,7 @@ function OrderBook({orderBook}) {
           </tbody>
         </table>
       }
-  </div>;
+    </div>;
 }
 
 const mapStateToProps = (state) => {
